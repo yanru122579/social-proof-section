@@ -1,12 +1,14 @@
 import React from "react";
-
+import styles from "./App.module.css";
 function Title() {
-  return <h1>10,000+ of our users love our products.</h1>;
+  return (
+    <h1 className={styles.title}>10,000+ of our users love our products.</h1>
+  );
 }
 
 function Description() {
   return (
-    <p>
+    <p className={styles.description}>
       We only provide great products combined with excellent customer service.
       See what our satisfied customers are saying about our services.
     </p>
@@ -15,7 +17,7 @@ function Description() {
 
 function Rate() {
   return (
-    <div>
+    <div className={styles.rate}>
       <ul>
         <li>start</li>
         <li>start</li>
@@ -37,7 +39,7 @@ function Comment() {
    * --comment
    */
   return (
-    <div>
+    <div className={styles.comment}>
       <header>
         <div>avatar</div>
         <div>
@@ -55,6 +57,7 @@ function Comment() {
 }
 
 function App() {
+  console.log(styles);
   /**
    * -header
    *  -title
@@ -65,12 +68,12 @@ function App() {
    * -list of Comments
    */
   return (
-    <main>
-      <header>
+    <main className={styles.main}>
+      <header className={styles.header}>
         <Title />
         <Description />
       </header>
-      <ul>
+      <ul className={styles.list}>
         <li>
           <Rate />
         </li>
@@ -81,7 +84,7 @@ function App() {
           <Rate />
         </li>
       </ul>
-      <ul>
+      <ul className={styles.list}>
         <li>
           <Comment />
         </li>
